@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Assembly 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140330
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic"
+	rel="stylesheet" />
+<link href="./css/default.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="./css/fonts.css" rel="stylesheet" type="text/css"
+	media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body onload = "showClock()">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1>
+					<a href="#">Assembly</a>
+				</h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="active"><a href="Main.html" accesskey="1" title="">Homepage</a></li>
+					<li><a href="#" accesskey="2" title="">Our Clients</a></li>
+					<li><a href="#" accesskey="3" title="">About Us</a></li>
+					<li><a href="#" accesskey="4" title="">Careers</a></li>
+					<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner" class="container">
+			<div class="title">
+				<h2 id="todayClock" class="clock"></h2>
+			</div>
+			<form action = "featured_news.jsp" method="post" name="check">
+				<label class="custom-radio-button">
+					 <input type="radio" name = "select_rank" value = "replyCount"/> 
+					 <span class="helping-el"></span>
+					 <span class="label-text">댓글 수</span>
+				</label>
+				<label class="custom-radio-button">
+					 <input type="radio" name = "select_rank" value = "LikeBad"/> 
+					 <span class="helping-el"></span>
+					 <span class="label-text">Like+Bad 합</span>	
+				</label>
+				<input type="submit" value="주요관심뉴스">
+			</form>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="three-column" class="container">
+			<div class="title">
+				<h2>지난 달 SNS 현황</h2>
+			</div>
+			<div class="tbox1">
+				<img src="nuclear_chart.jsp">
+			</div>
+			
+			<div class="tbox2">
+				<img src="nuclear_institute_chart.jsp">
+<!-- 				<a href="#" class="button button-alt">More Info</a> -->
+			</div>
+		</div>
+	</div>
+	<div id="welcome">
+		<div class="container">
+			<div class="title">
+				<h2>Fusce ultrices fringilla metus</h2>
+				<span class="byline">Donec leo, vivamus fermentum nibh in
+					augue praesent a lacus at urna congue</span>
+			</div>
+			<p>
+				This is <strong>Assembly</strong>, a free, fully standards-compliant
+				CSS template designed by <a href="http://templated.co"
+					rel="nofollow">TEMPLATED</a>. The photos in this template are from
+				<a href="http://fotogrph.com/"> Fotogrph</a>. This free template is
+				released under the <a href="http://templated.co/license">Creative
+					Commons Attribution</a> license, so you're pretty much free to do
+				whatever you want with it (even use it commercially) provided you
+				give us credit for it. Have fun :)
+			</p>
+			<ul class="actions">
+				<li><a href="#" class="button">Etiam posuere</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="copyright" class="container">
+		<p>
+			&copy; Untitled. All rights reserved. | Photos by <a
+				href="http://fotogrph.com/">Fotogrph</a> | Design by <a
+				href="http://templated.co" rel="nofollow">TEMPLATED</a>.
+		</p>
+	</div>
+
+	<script language="javascript">
+		function showClock() {
+			var today = new Date();
+			var todayClock = document.getElementById("todayClock");
+			var nowYear = today.getFullYear();
+			// getMonth 는 0 부터 인덱스가 시작하기 때문에 + 1 을 해주어야 합니다.
+			var nowMonth = today.getMonth() + 1;
+			var nowDate = today.getDate();
+			var nowDay = today.getDay();
+			var day;
+			switch(nowDay) {
+				case 0 :
+					day = '일'
+					break;
+				case 1 :
+					day = '월'
+					break;
+				case 2 :
+					day = '화'
+					break;
+				case 3 :
+					day = '수'
+					break;
+				case 4 :
+					day = '목'
+					break;
+				case 5 :
+					day = '금'
+					break;
+				case 6 :
+					day = '토'
+					break;
+			}
+			
+			todayClock.innerText = '오늘은 ' + nowYear + '년 ' + nowMonth + '월 '
+					+ nowDate + '일' + day + '요일 입니다'
+			setTimeout(showClock, 1000);
+		}
+	</script>
+
+</body>
+</html>
