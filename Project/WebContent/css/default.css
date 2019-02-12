@@ -71,7 +71,7 @@
 	{
 		border-collapse: collapse;
 		border-spacing: 0;	
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 		color : #111111;
 		border : 1px solid black;
 		text-align : center;
@@ -80,7 +80,7 @@
 	
 	th
 	{	
-		width : 100px;
+		width : 30%;
 	}
 
 	
@@ -255,8 +255,8 @@ label.custom-radio-button input[type="radio"]:checked ~ .helping-el:after {
 	 input[type="submit"]
 	 {
 	 	display: inline-block;
-	 	width: 200px;  
-	 	height: 70px;
+	 	width: 150px;  
+	 	height: 50px;
 		letter-spacing: 0.10em;
 		margin-left : 2em;
 		margin-top: 2em;
@@ -266,7 +266,8 @@ label.custom-radio-button input[type="radio"]:checked ~ .helping-el:after {
 		font-weight: 700;
 		font-size: 1em;
 		color: #FFF;
-	 	border-color: rgba(0,0,0,.8);
+		border : 0;
+		outline : 0;
 	 }
 /*********************************************************************************/
 /* 4-column                                                                      */

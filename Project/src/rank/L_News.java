@@ -3,13 +3,15 @@ package rank;
 public class L_News implements Comparable<L_News>{
 	String title;
 	String url;
+	String date;
 	int like;
 	int bad;
 	int sum;
 	
-	public L_News(String title,String url,int like,int bad,int sum) {
+	public L_News(String title,String url,String date,int like,int bad,int sum) {
 		this.title = title;
 		this.url = url;
+		this.date = date;
 		this.like = like;
 		this.bad = bad;
 		this.sum = sum;
@@ -21,6 +23,10 @@ public class L_News implements Comparable<L_News>{
 	
 	public String getURL() {
 		return this.url;
+	}
+	
+	public String getDate() {
+		return this.date;
 	}
 	
 	public int getLike() {

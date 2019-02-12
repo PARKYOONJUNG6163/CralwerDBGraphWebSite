@@ -3,11 +3,13 @@ package rank;
 public class R_News implements Comparable<R_News>{
 		String title;
 		String url;
+		String date;
 		int count;
 		
-		public R_News(String title,String url,int count) {
+		public R_News(String title,String url,String date,int count) {
 			this.title = title;
 			this.url = url;
+			this.date = date;
 			this.count = count;
 		}
 		
@@ -22,6 +24,11 @@ public class R_News implements Comparable<R_News>{
 		public int getCount() {
 			return this.count;
 		}
+		
+		public String getDate() {
+			return this.date;
+		}
+		
 		@Override
 		public int compareTo(R_News n) {
 			// TODO Auto-generated method stub

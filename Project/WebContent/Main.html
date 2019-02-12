@@ -46,7 +46,16 @@ Released   : 20140330
 			<div class="title">
 				<h2 id="todayClock" class="clock"></h2>
 			</div>
-			<form action = "featured_news.jsp" method="post" name="check">
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="three-column" class="container">
+			<div class="title">
+				<h2>지난 달 SNS 현황</h2>
+			</div>
+			<div class="tbox1">
+				<img src="nuclear_chart.jsp">
+			<form action = "nuclear_featured_news.jsp" method="post" name="check">
 				<label class="custom-radio-button">
 					 <input type="radio" name = "select_rank" value = "replyCount"/> 
 					 <span class="helping-el"></span>
@@ -58,21 +67,24 @@ Released   : 20140330
 					 <span class="label-text">Like+Bad 합</span>	
 				</label>
 				<input type="submit" value="주요관심뉴스">
-			</form>
-		</div>
-	</div>
-	<div id="wrapper">
-		<div id="three-column" class="container">
-			<div class="title">
-				<h2>지난 달 SNS 현황</h2>
-			</div>
-			<div class="tbox1">
-				<img src="nuclear_chart.jsp">
+			</form>				
 			</div>
 			
 			<div class="tbox2">
 				<img src="nuclear_institute_chart.jsp">
-<!-- 				<a href="#" class="button button-alt">More Info</a> -->
+			<form action = "nuclear_institute_featured_news.jsp" method="post" name="check">
+				<label class="custom-radio-button">
+					 <input type="radio" name = "select_rank" value = "replyCount"/> 
+					 <span class="helping-el"></span>
+					 <span class="label-text">댓글 수</span>
+				</label>
+				<label class="custom-radio-button">
+					 <input type="radio" name = "select_rank" value = "LikeBad"/> 
+					 <span class="helping-el"></span>
+					 <span class="label-text">Like+Bad 합</span>	
+				</label>
+				<input type="submit" value="주요관심뉴스">
+			</form>						
 			</div>
 		</div>
 	</div>
@@ -141,7 +153,7 @@ Released   : 20140330
 			}
 			
 			todayClock.innerText = '오늘은 ' + nowYear + '년 ' + nowMonth + '월 '
-					+ nowDate + '일' + day + '요일 입니다'
+					+ nowDate + '일 ' + day + '요일 입니다'
 			setTimeout(showClock, 1000);
 		}
 	</script>

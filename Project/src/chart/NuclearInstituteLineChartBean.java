@@ -50,13 +50,13 @@ public class NuclearInstituteLineChartBean {
 		getNaverDB();
 		getDaumDB();
 
-		dataset.addValue(naver_first.size(), series1, "10days");
-		dataset.addValue(naver_second.size(), series1, "20days");
-		dataset.addValue(naver_third.size(), series1, "30days");
+		dataset.addValue(naver_first.size(), series1, "1~9days");
+		dataset.addValue(naver_second.size(), series1, "10~19days");
+		dataset.addValue(naver_third.size(), series1, "20~30days");
 
-		dataset.addValue(daum_first.size(), series2, "10days");
-		dataset.addValue(daum_second.size(), series2, "20days");
-		dataset.addValue(daum_third.size(), series2, "30days");
+		dataset.addValue(daum_first.size(), series2, "1~9days");
+		dataset.addValue(daum_second.size(), series2, "10~19days");
+		dataset.addValue(daum_third.size(), series2, "20~30days");
 
 		return dataset;
 	}
@@ -188,7 +188,7 @@ public class NuclearInstituteLineChartBean {
 	}
 
 	public JFreeChart getLineChart() {
-		String chartTitle = "NuclearInstitute";
+		String chartTitle = "Institute";
 		String categoryAxisLabel = "10-day interval articles";
 		String valueAxisLabel = "Count";
 
