@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Assembly 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140330
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic"
+	rel="stylesheet" />
+<link href="./css/default.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="./css/fonts.css" rel="stylesheet" type="text/css"
+	media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1>
+					<a href="#">BigData</a>
+				</h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="input_keyword.jsp" accesskey="1">Search</a></li>
+					<li class="active"><a href="index.html" accesskey="2" title="">Login</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		<div id="three-column" class="loginContainer">
+			<div class="title">
+				<h1 style="color:white">Login</h1>
+			</div>
+			<form name="LoginForm" method="get" onsubmit="return do_login()">
+				<div class="inline"><label for="id">ID</label><input type="text" id="id" name="id" /></div><br/>
+				<div class="inline"><label for="password">Password</label><input type="password" name="pwd" /></div><br/> 
+				<input type="submit" value="로그인">			
+			</form>
+		</div>
+			<script language="javascript">
+		function do_login(){
+			var id = document.LoginForm.id.value; 
+			var pwd = document.LoginForm.pwd.value;
+			if(id == ""){
+				alert("아이디를 입력하세요.");
+				document.LoginForm.id.focus();
+				return false;
+			}
+			if(pwd == ""){
+				alert("비밀번호를 입력하세요.");
+				document.LoginForm.pwd.focus();
+				return false;
+			}
+			
+			if(id == "" && pwd == ""){
+				alert("로그인 성공 !");
+				// 로그인 
+				event.preventDefault();
+				location.href = "ajax_login.jsp?id="+id+"&pwd="+pwd;
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>
